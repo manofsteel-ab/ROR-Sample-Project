@@ -25,7 +25,8 @@ Guide to setup ROR Application In Mac
 
 # Step3-  
 
- Installing Rails
+ Installing Rails-
+ 
  gem install rails -v 5.1.4
 
  Setting up Databases- 
