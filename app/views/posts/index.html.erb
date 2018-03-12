@@ -1,6 +1,12 @@
 <h1>Blog Post</h1>
-<h3>Sample Post 1</h3>
-<p><%= @content_first %></p>
-<hr/>
-<h3>Sample Post 2</h3>
-<p><%= @content_second %></p>
+
+<% @posts.each do |post| %>
+  <h2>
+  	<%= link_to post.title, post %>
+  </h2>
+  <p>
+  	<%= post.body %>
+  </p>
+  <hr>
+
+<% end %>
