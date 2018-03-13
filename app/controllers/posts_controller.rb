@@ -22,12 +22,24 @@ class PostsController < ApplicationController
 		end
 	end
 	def edit
-		
+		@posts = Post.find(params[:id])
+		@category = Category.all;
 	end
 	def update
-		
+		@posts = Post.find(params[:id])
+
+		if @posts.update_attributes(post_params)
+			redirect_to post_path, :notice =>"You post has been updated."
+	    else
+	    	render "edit"
+	    end		
 	end
 	def destroy
-		
+	    @post = Post.find(params[:id])
+	    @post.destroy
+	    respond_to do |format|
+	    	format.html { redirect_to posts_url }
+	    	format.json { head :no_content }
+	    end
 	end
 end
