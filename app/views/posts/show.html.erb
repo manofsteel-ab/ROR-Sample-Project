@@ -2,4 +2,4 @@
 <h2> <%= @posts.title %> </h2>
 <p> <%= @posts.body %> </p>
 <p>
-	<%= link_to "Edit Post", edit_post_path %> | <%= button_to 'delete', @post, method: :delete, :onclick => "return confirm('Are you sure you want to dele this post?')" %> </p>
+	<%= link_to "Edit Post", edit_post_path %> | <%= button_to  'delete', @post, method: :delete, :onclick => "return confirm('Are you sure you want to dele this post?')" %> </p>
