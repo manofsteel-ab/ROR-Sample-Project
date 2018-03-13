@@ -1,7 +1,0 @@
-{
-  "name": "myrubyblog",
-  "private": true,
-  "dependencies": {
-    "turbolinks": "^5.1.1"
-  }
-}
